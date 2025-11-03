@@ -1,0 +1,238 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock title %}
+
+{% block body %}
+
+<!-- ✅ Carousel Section -->
+<div class="container-fluid px-0">
+  <div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <img src="/static/3.jfif"
+             class="d-block w-100"
+             alt="Car"
+             style="height: 500px; object-fit: cover; border-radius: 10px;">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Welcome to Rishi Garage</h5>
+          <p>Your trusted partner for quality vehicles and exceptional service.</p>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <img src="/static/1.jfif"
+             class="d-block w-100"
+             alt="Car"
+             style="height: 500px; object-fit: cover; border-radius: 10px;">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Drive Your Dreams</h5>
+          <p>Find the perfect vehicle that matches your lifestyle and budget.</p>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <img src="/static/2.jfif"
+             class="d-block w-100"
+             alt="Car"
+             style="height: 500px; object-fit: cover; border-radius: 10px;">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Quality You Can Trust</h5>
+          <p>Explore our wide range of vehicles and experience top-notch service.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+<!-- ✅ Cards Section -->
+<div class="album py-4 bg-body-tertiary">
+  <div class="container">
+    <h1 class="mb-4 text-center text-black">Our Featured Vehicles</h1>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+      <!-- Card 1 -->
+      <div class="col">
+        <div class="card shadow-sm">
+          <img src="https://images.unsplash.com/photo-1522255272218-7ac5249be344?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTMxfHxjYXJ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600"
+               class="card-img-top" alt="Luxury Car" style="height:225px; object-fit:cover;">
+          <div class="card-body">
+            <p class="card-text">Luxury sports car with outstanding design and performance.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+              </div>
+              <small class="text-body-secondary">9 mins</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col">
+        <div class="card shadow-sm">
+          <img src="https://images.unsplash.com/photo-1541348263662-e068662d82af?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTA1fHxjYXJ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600"
+               class="card-img-top" alt="Sports Car" style="height:225px; object-fit:cover;">
+          <div class="card-body">
+            <p class="card-text">A high-performance sports car built for speed and thrill.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+              </div>
+              <small class="text-body-secondary">12 mins</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Card 3 -->
+      <div class="col">
+        <div class="card shadow-sm">
+          <img src="https://images.unsplash.com/photo-1611001871555-1a09975c1975?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTY3fHxjYXJ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600"
+               class="card-img-top" alt="SUV Car" style="height:225px; object-fit:cover;">
+          <div class="card-body">
+            <p class="card-text">Premium SUV combining comfort, space, and durability.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+              </div>
+              <small class="text-body-secondary">15 mins</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col">
+        <div class="card shadow-sm">
+          <img src="https://images.unsplash.com/photo-1493238792000-8113da705763?auto=format&fit=crop&w=800&q=80"
+               class="card-img-top" alt="Electric Car" style="height:225px; object-fit:cover;">
+          <div class="card-body">
+            <p class="card-text">Electric car with zero emissions and high efficiency.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+              </div>
+              <small class="text-body-secondary">18 mins</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="col">
+        <div class="card shadow-sm">
+          <img src="https://images.unsplash.com/photo-1502872364588-894d7d6ddfab?auto=format&fit=crop&w=800&q=80"
+               class="card-img-top" alt="Classic Car" style="height:225px; object-fit:cover;">
+          <div class="card-body">
+            <p class="card-text">Classic vintage car with timeless beauty and elegance.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+              </div>
+              <small class="text-body-secondary">21 mins</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="col">
+        <div class="card shadow-sm">
+          <img src="https://images.unsplash.com/photo-1689041570895-bc4d104bbe76?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fGNhciUyMGNvbnZlcnRhYmxlfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600"
+               class="card-img-top" alt="Convertible Car" style="height:225px; object-fit:cover;">
+          <div class="card-body">
+            <p class="card-text">Convertible roadster for sunny drives and open-air experience.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+              </div>
+              <small class="text-body-secondary">25 mins</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="col">
+        <div class="card shadow-sm">
+          <img src="https://plus.unsplash.com/premium_photo-1737182592549-0c83f93e2903?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTEyfHxjYXJ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600"
+               class="card-img-top" alt="Racing Car" style="height:225px; object-fit:cover;">
+          <div class="card-body">
+            <p class="card-text">Professional racing car engineered for maximum speed.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+              </div>
+              <small class="text-body-secondary">29 mins</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="col">
+        <div class="card shadow-sm">
+          <img src="https://images.unsplash.com/photo-1619405399517-d7fce0f13302?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE5fHxjYXJ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600"
+               class="card-img-top" alt="Family Car" style="height:225px; object-fit:cover;">
+          <div class="card-body">
+            <p class="card-text">Reliable family car with spacious interiors and safety features.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+              </div>
+              <small class="text-body-secondary">32 mins</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 9 -->
+      <div class="col">
+        <div class="card shadow-sm">
+          <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=800&q=80"
+               class="card-img-top" alt="Luxury Sedan" style="height:225px; object-fit:cover;">
+          <div class="card-body">
+            <p class="card-text">Luxury sedan that blends comfort, style, and advanced tech.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+              </div>
+              <small class="text-body-secondary">35 mins</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+    </div>
+  </div>
+</div>
+
+{% endblock body %}
