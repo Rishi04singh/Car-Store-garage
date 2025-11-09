@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+{% block title %}Contact{% endblock title %}
+
+{% block body %}
+
+<!-- ✅ Hero Section -->
+<div class="container-fluid px-0 mb-5 position-relative">
+  <img src="https://images.pexels.com/photos/190537/pexels-photo-190537.jpeg"
+       class="d-block w-100"
+       alt="Car"
+       style="height: 450px; object-fit: cover;">
+  <div class="position-absolute top-50 start-50 translate-middle text-center text-white">
+    <h1 class="fw-bold display-5 bg-dark bg-opacity-50 px-4 py-2 rounded">Contact Rishi Garage</h1>
+    <p class="lead bg-dark bg-opacity-50 px-3 py-1 rounded">We’re here to help you with all your vehicle needs</p>
+  </div>
+</div>
+
+<!-- ✅ Contact Info + Form Section -->
+<div class="container my-5">
+  <div class="row g-4">
+    
+    <!-- Left: Info -->
+    <div class="col-md-5">
+      <h2 class="mb-4 fw-bold text-warning">Get in Touch</h2>
+      <p>Have questions about our services, vehicles, or repairs? Fill out the form or reach us through the following details.</p>
+
+      <ul class="list-unstyled mt-4">
+        <li class="mb-3">
+          <i class="bi bi-geo-alt-fill text-warning me-2"></i>
+          <strong>Address:</strong> Taramandal , Gorakhpur India
+        </li>
+        <li class="mb-3">
+          <i class="bi bi-telephone-fill text-warning me-2"></i>
+          <strong>Phone:</strong> +91 8887728229
+        </li>
+        <li class="mb-3">
+          <i class="bi bi-envelope-fill text-warning me-2"></i>
+          <strong>Email:</strong> info@rishigarage.com
+        </li>
+        <li class="mb-3">
+          <i class="bi bi-clock-fill text-warning me-2"></i>
+          <strong>Hours:</strong> Mon–Sat, 9:00 AM – 7:00 PM
+        </li>
+      </ul>
+    </div>
+
+    <!-- Right: Form -->
+    <div class="col-md-7">
+      <div class="card shadow-lg border-0 rounded-4">
+        <div class="card-body p-4">
+          <h3 class="mb-4 text-center text-dark fw-semibold">Send us a Message</h3>
+
+          <!-- ✅ Success Message Alert -->
+          {% if messages %}
+            <div class="container mb-3">
+              {% for message in messages %}
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                  {{ message }}
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+              {% endfor %}
+            </div>
+          {% endif %}
+
+          <!-- ✅ Contact Form -->
+          <form method="POST" action="/contact">
+            {% csrf_token %}
+            
+            <div class="mb-3">
+              <label for="name" class="form-label">Your Name</label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="phone" class="form-label">Phone Number</label>
+              <input type="text" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" name="message" rows="4" placeholder="Write your message..." required></textarea>
+            </div>
+
+            <div class="text-center">
+              <button type="submit" class="btn btn-warning text-white px-5 py-2 fw-semibold">
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ✅ Google Map Section -->
+<div class="container-fluid px-0 mt-5 mb-5">
+  <h2 class="text-center mb-4 fw-bold text-warning">Find Us on Map</h2>
+  <div class="ratio ratio-16x9">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11610016257!2d72.74109949348169!3d19.08219783993083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63a7a8b8f1f%3A0x91f8fefc3d4e65f2!2sMumbai!5e0!3m2!1sen!2sin!4v1698085480196!5m2!1sen!2sin" 
+      width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
+  </div>
+</div>
+
+<!-- ✅ Auto-hide alert after 4 seconds -->
+<script>
+  setTimeout(() => {
+    const alert = document.querySelector('.alert');
+    if (alert) {
+      alert.classList.remove('show');
+      alert.classList.add('fade');
+    }
+  }, 4000);
+</script>
+
+{% endblock body %}

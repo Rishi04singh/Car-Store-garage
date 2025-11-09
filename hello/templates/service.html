@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% block title %}Service{% endblock title %}
+
+{% block body %}
+
+<!-- ✅ Hero Section -->
+<div class="container-fluid px-0 mb-5 position-relative">
+  <img src="https://images.pexels.com/photos/4480456/pexels-photo-4480456.jpeg"
+       class="d-block w-100"
+       alt="Garage"
+       style="height: 400px; object-fit: cover;">
+  <div class="position-absolute top-50 start-50 translate-middle text-center text-white">
+    <h1 class="fw-bold display-5 bg-dark bg-opacity-50 px-4 py-2 rounded">Our Services</h1>
+    <p class="lead bg-dark bg-opacity-50 px-3 py-1 rounded">Quality, Trust, and Excellence in Every Service</p>
+  </div>
+</div>
+
+<!-- ✅ Service Blocks -->
+<div class="container my-5">
+  <div class="row g-5">
+    
+    <!-- 🟠 New Vehicles -->
+    <div class="col-md-4">
+      <div class="card border-0 shadow-lg rounded-4 h-100">
+        <img src="https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg"
+             class="card-img-top rounded-top-4"
+             alt="New Cars"
+             style="height: 220px; object-fit: cover;">
+        <div class="card-body text-center">
+          <h4 class="fw-bold text-warning">New Vehicles</h4>
+          <p class="text-muted">
+            Explore our latest collection of premium vehicles. Whether you’re looking for comfort, performance, or innovation — we have something for everyone.
+          </p>
+          <a href="/newvehicles" class="btn btn-outline-warning fw-semibold px-4">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🟠 Repair Services -->
+    <div class="col-md-4">
+      <div class="card border-0 shadow-lg rounded-4 h-100">
+        <img src="https://images.pexels.com/photos/3806288/pexels-photo-3806288.jpeg"
+             class="card-img-top rounded-top-4"
+             alt="Car Repair"
+             style="height: 220px; object-fit: cover;">
+        <div class="card-body text-center">
+          <h4 class="fw-bold text-warning">Repair & Maintenance</h4>
+          <p class="text-muted">
+            From oil changes to full engine repairs, our expert mechanics ensure your vehicle stays in top condition. Reliable service with genuine parts.
+          </p>
+          <a href="/repair" class="btn btn-outline-warning fw-semibold px-4">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🟠 Used Vehicles -->
+    <div class="col-md-4">
+      <div class="card border-0 shadow-lg rounded-4 h-100">
+        <img src="https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg"
+             class="card-img-top rounded-top-4"
+             alt="Used Cars"
+             style="height: 220px; object-fit: cover;">
+        <div class="card-body text-center">
+          <h4 class="fw-bold text-warning">Used Vehicles</h4>
+          <p class="text-muted">
+            Buy certified pre-owned cars that look and feel brand new. Each vehicle is inspected and guaranteed for performance and safety.
+          </p>
+        <a href="/usedvehicles" class="btn btn-outline-warning fw-semibold px-4">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ✅ CTA Section -->
+<div class="container-fluid text-center bg-dark text-white py-5 mt-5 rounded-3">
+  <h2 class="fw-bold mb-3">Need Expert Help?</h2>
+  <p class="lead mb-4">Book an appointment today and experience professional care for your vehicle at Rishi Garage.</p>
+  <a href="/contact" class="btn btn-warning text-white fw-semibold px-5 py-2">Contact Us</a>
+</div>
+
+{% endblock body %}

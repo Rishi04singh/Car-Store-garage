@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% block title %}About Us{% endblock title %}
+
+{% block body %}
+
+<!-- ✅ Hero Section -->
+<div class="container-fluid px-0 position-relative">
+  <img src="https://images.pexels.com/photos/4489733/pexels-photo-4489733.jpeg" 
+       class="d-block w-100" 
+       alt="Garage Image"
+       style="height: 450px; object-fit: cover;">
+  <div class="position-absolute top-50 start-50 translate-middle text-center text-white">
+    <h1 class="fw-bold display-5 bg-dark bg-opacity-50 px-4 py-2 rounded">About Rishi Garage</h1>
+    <p class="lead bg-dark bg-opacity-50 px-3 py-1 rounded">Where passion meets precision in every repair</p>
+  </div>
+</div>
+
+<!-- ✅ Our Story -->
+<div class="container my-5">
+  <div class="row align-items-center g-5">
+    <!-- Image Column -->
+    <div class="col-md-6 d-flex justify-content-center">
+      <img src="https://images.pexels.com/photos/4480456/pexels-photo-4480456.jpeg"
+           class="img-fluid rounded-4 shadow"
+           alt="Mechanic at work"
+           style="max-height: 350px; width: 100%; object-fit: cover;">
+    </div>
+
+    <!-- Text Column -->
+    <div class="col-md-6">
+      <h2 class="fw-bold text-warning mb-3">Our Story</h2>
+      <p>
+        Established in 2010, <strong>Rishi Garage</strong> has been a trusted name in automotive care and service. 
+        From humble beginnings, we’ve grown into a fully equipped, modern garage offering everything from basic maintenance 
+        to advanced engine diagnostics. Our mission is simple — to provide honest, high-quality work that keeps your vehicle 
+        safe, efficient, and road-ready.
+      </p>
+      <p>
+        With over a decade of experience, our team of skilled professionals combines technology with craftsmanship to ensure 
+        every customer drives away satisfied.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<!-- ✅ Mission & Values -->
+<div class="container my-5">
+  <div class="text-center mb-5">
+    <h2 class="fw-bold text-warning">Our Mission & Values</h2>
+    <p class="text-muted">The foundation of our garage lies in trust, transparency, and top-notch service.</p>
+  </div>
+
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card border-0 shadow-sm h-100 text-center p-4">
+        <i class="bi bi-wrench-adjustable-circle-fill text-warning display-4 mb-3"></i>
+        <h5 class="fw-bold">Expert Service</h5>
+        <p>We use the latest diagnostic tools and equipment to ensure your car receives expert-level care every time.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card border-0 shadow-sm h-100 text-center p-4">
+        <i class="bi bi-heart-fill text-danger display-4 mb-3"></i>
+        <h5 class="fw-bold">Customer First</h5>
+        <p>Our goal is your satisfaction. We believe in transparent communication and fair pricing without hidden costs.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card border-0 shadow-sm h-100 text-center p-4">
+        <i class="bi bi-shield-check text-success display-4 mb-3"></i>
+        <h5 class="fw-bold">Reliability</h5>
+        <p>We stand behind every repair and service. Your vehicle’s safety and performance are our top priorities.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ✅ Gallery Section -->
+<div class="container-fluid px-0 mt-5 bg-body-tertiary py-5">
+  <h2 class="text-center fw-bold text-warning mb-4">Inside Our Garage</h2>
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <img src="https://images.pexels.com/photos/162553/keys-workshop-mechanic-tools-162553.jpeg" class="img-fluid rounded-3 shadow" alt="Garage Interior">
+      </div>
+      <div class="col-md-4">
+        <img src="https://images.pexels.com/photos/4489703/pexels-photo-4489703.jpeg" class="img-fluid rounded-3 shadow" alt="Mechanic Working">
+      </div>
+      <div class="col-md-4">
+        <img src="https://images.pexels.com/photos/4488656/pexels-photo-4488656.jpeg" class="img-fluid rounded-3 shadow" alt="Car Service Area">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ✅ Footer Call-to-Action -->
+<div class="container text-center my-5">
+  <h3 class="fw-bold text-dark">Want to Experience Quality Service?</h3>
+  <p class="text-muted mb-4">Book an appointment today and let us take care of your vehicle like it’s our own.</p>
+  <a href="/contact" class="btn btn-warning text-white px-4 py-2 fw-semibold">Contact Us</a>
+</div>
+
+{% endblock body %}
