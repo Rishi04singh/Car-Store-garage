@@ -1,0 +1,16 @@
+# Render Blueprint Specification
+services:
+  - type: web
+    name: car-store-garage
+    runtime: python
+    buildCommand: ./build.sh
+    startCommand: gunicorn hello.wsgi:application
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.9.18
+      - key: DEBUG
+        value: "False"
+      - key: SECRET_KEY
+        generateValue: true
+      - key: WEB_CONCURRENCY
+        value: 4

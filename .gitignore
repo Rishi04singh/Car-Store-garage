@@ -1,0 +1,11 @@
+# Django Git Ignore Patterns
+*.pyc
+__pycache__/
+db.sqlite3
+staticfiles/
+.env
+.venv/
+venv/
+env/
+*.log
+.DS_Store
