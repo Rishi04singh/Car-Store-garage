@@ -3,6 +3,7 @@ services:
   - type: web
     name: car-store-garage
     runtime: python
+    plan: free
     buildCommand: ./build.sh
     startCommand: gunicorn hello.wsgi:application
     envVars:
