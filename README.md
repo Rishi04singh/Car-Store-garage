@@ -40,15 +40,6 @@
 
 ---
 
-## 🖼️ Project Preview
-
-<p align="center">
-  <img src="https://placehold.co/900x450/1f2937/ffffff?text=Car+Store+Garage+Preview" alt="Project Preview"/>
-</p>
-
-> Replace the image above with your project screenshot later.
-
----
 
 ## 🛠️ Tech Stack
 
