@@ -1,88 +1,243 @@
 {% extends 'base.html' %}
-{% block title %}New Vehicles{% endblock title %}
+{% block title %}New Vehicles Showroom - Rishi Garage{% endblock title %}
 
 {% block body %}
-<div class="container my-5">
-  <h1 class="text-center fw-bold text-warning mb-5">Explore Our Latest Vehicles</h1>
+<div class="container my-5 py-3">
+  <div class="text-center mb-5">
+    <span class="badge bg-orange mb-3 px-3 py-2 text-uppercase fw-semibold tracking-wider">Showroom</span>
+    <h1 class="display-4 fw-extrabold text-white mb-2">Explore Our Latest Models</h1>
+    <p class="text-secondary max-w-600 mx-auto">Explore premium brand new models in stock. Select a model to inquire about customized options, pricing, and home delivery.</p>
+  </div>
   
   <div class="row g-4">
     <!-- 🚗 Car 1 -->
-    <div class="col-md-4">
-      <div class="card shadow-lg border-0 rounded-4 overflow-hidden h-100">
-        <img src="https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg" 
-             class="card-img-top" style="height:230px; object-fit:cover;">
-        <div class="card-body text-center">
-          <h5 class="fw-bold">Hyundai Creta 2025</h5>
-          <p class="text-muted">Premium SUV with advanced comfort and power-packed performance.</p>
-          <p class="fw-semibold text-warning mb-0">₹ 12.5 Lakh</p>
+    <div class="col-lg-4 col-md-6">
+      <div class="card shadow-lg border-0 rounded-4 overflow-hidden h-100 d-flex flex-column">
+        <div class="position-relative">
+          <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=600&q=80" 
+               class="card-img-top" style="height:240px; object-fit:cover;" alt="Porsche 911">
+          <span class="position-absolute top-0 end-0 m-3 badge bg-orange">New Launch</span>
+        </div>
+        <div class="card-body p-4 d-flex flex-column">
+          <h5 class="fw-bold text-white mb-2">Porsche 911 Carrera</h5>
+          <p class="text-secondary small flex-grow-1">Premium sports coupe combining legendary performance, unmatched handling, and everyday practicality.</p>
+          <div class="row g-2 mb-3 text-secondary small">
+            <div class="col-6"><i class="bi bi-cpu text-orange me-2"></i>3.0L Twin-Turbo</div>
+            <div class="col-6"><i class="bi bi-speedometer text-orange me-2"></i>385 HP</div>
+            <div class="col-6"><i class="bi bi-gear-wide-connected text-orange me-2"></i>8-Speed PDK</div>
+            <div class="col-6"><i class="bi bi-lightning text-orange me-2"></i>Petrol</div>
+          </div>
+          <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top border-secondary border-opacity-10">
+            <span class="fw-bold text-white fs-5">₹ 1.86 Crore</span>
+            <button class="btn btn-sm btn-orange open-inquiry-modal" data-car="Porsche 911 Carrera">Inquire</button>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- 🚗 Car 2 -->
-    <div class="col-md-4">
-      <div class="card shadow-lg border-0 rounded-4 overflow-hidden h-100">
-        <img src="https://images.pexels.com/photos/210182/pexels-photo-210182.jpeg"
-             class="card-img-top" style="height:230px; object-fit:cover;">
-        <div class="card-body text-center">
-          <h5 class="fw-bold">Tata Nexon EV</h5>
-          <p class="text-muted">India’s favorite electric SUV with a futuristic design and zero emissions.</p>
-          <p class="fw-semibold text-warning mb-0">₹ 14.2 Lakh</p>
+    <div class="col-lg-4 col-md-6">
+      <div class="card shadow-lg border-0 rounded-4 overflow-hidden h-100 d-flex flex-column">
+        <div class="position-relative">
+          <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=600&q=80"
+               class="card-img-top" style="height:240px; object-fit:cover;" alt="Tesla Model S">
+          <span class="position-absolute top-0 end-0 m-3 badge bg-success text-white">Electric</span>
+        </div>
+        <div class="card-body p-4 d-flex flex-column">
+          <h5 class="fw-bold text-white mb-2">Tesla Model S Plaid</h5>
+          <p class="text-secondary small flex-grow-1">The quickest accelerating electric sedan in production. Futuristic Autopilot systems and gaming-class interior console.</p>
+          <div class="row g-2 mb-3 text-secondary small">
+            <div class="col-6"><i class="bi bi-battery-charging text-orange me-2"></i>100 kWh</div>
+            <div class="col-6"><i class="bi bi-speedometer text-orange me-2"></i>1020 HP</div>
+            <div class="col-6"><i class="bi bi-gear-wide-connected text-orange me-2"></i>Tri-Motor AWD</div>
+            <div class="col-6"><i class="bi bi-lightning text-orange me-2"></i>Electric</div>
+          </div>
+          <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top border-secondary border-opacity-10">
+            <span class="fw-bold text-white fs-5">₹ 1.50 Crore</span>
+            <button class="btn btn-sm btn-orange open-inquiry-modal" data-car="Tesla Model S Plaid">Inquire</button>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- 🚗 Car 3 -->
-    <div class="col-md-4">
-      <div class="card shadow-lg border-0 rounded-4 overflow-hidden h-100">
-        <img src="https://images.pexels.com/photos/358070/pexels-photo-358070.jpeg"
-             class="card-img-top" style="height:230px; object-fit:cover;">
-        <div class="card-body text-center">
-          <h5 class="fw-bold">Maruti Suzuki Baleno</h5>
-          <p class="text-muted">A premium hatchback built for style, efficiency, and comfort.</p>
-          <p class="fw-semibold text-warning mb-0">₹ 8.8 Lakh</p>
+    <div class="col-lg-4 col-md-6">
+      <div class="card shadow-lg border-0 rounded-4 overflow-hidden h-100 d-flex flex-column">
+        <div class="position-relative">
+          <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=600&q=80"
+               class="card-img-top" style="height:240px; object-fit:cover;" alt="Mercedes C-Class">
+          <span class="position-absolute top-0 end-0 m-3 badge bg-orange">Trending</span>
+        </div>
+        <div class="card-body p-4 d-flex flex-column">
+          <h5 class="fw-bold text-white mb-2">Mercedes-Benz C-Class</h5>
+          <p class="text-secondary small flex-grow-1">A luxury sedan engineered for executive comfort. Immersive ambient cabin lighting and voice assistant control system.</p>
+          <div class="row g-2 mb-3 text-secondary small">
+            <div class="col-6"><i class="bi bi-cpu text-orange me-2"></i>2.0L Turbo I4</div>
+            <div class="col-6"><i class="bi bi-speedometer text-orange me-2"></i>255 HP</div>
+            <div class="col-6"><i class="bi bi-gear-wide-connected text-orange me-2"></i>9G-TRONIC</div>
+            <div class="col-6"><i class="bi bi-lightning text-orange me-2"></i>Mild-Hybrid</div>
+          </div>
+          <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top border-secondary border-opacity-10">
+            <span class="fw-bold text-white fs-5">₹ 65.0 Lakh</span>
+            <button class="btn btn-sm btn-orange open-inquiry-modal" data-car="Mercedes-Benz C-Class">Inquire</button>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- 🚗 Car 4 -->
-    <div class="col-md-4">
-      <div class="card shadow-lg border-0 rounded-4 overflow-hidden h-100">
-        <img src="https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg"
-             class="card-img-top" style="height:230px; object-fit:cover;">
-        <div class="card-body text-center">
-          <h5 class="fw-bold">Mahindra XUV700</h5>
-          <p class="text-muted">Powerful SUV with luxury interiors and cutting-edge safety features.</p>
-          <p class="fw-semibold text-warning mb-0">₹ 18.9 Lakh</p>
+    <div class="col-lg-4 col-md-6">
+      <div class="card shadow-lg border-0 rounded-4 overflow-hidden h-100 d-flex flex-column">
+        <div class="position-relative">
+          <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=600&q=80"
+               class="card-img-top" style="height:240px; object-fit:cover;" alt="Range Rover">
+          <span class="position-absolute top-0 end-0 m-3 badge bg-orange">Premium SUV</span>
+        </div>
+        <div class="card-body p-4 d-flex flex-column">
+          <h5 class="fw-bold text-white mb-2">Range Rover Sport</h5>
+          <p class="text-secondary small flex-grow-1">Unrivaled luxury and off-road capabilities. High driving position with executive class rear seating options.</p>
+          <div class="row g-2 mb-3 text-secondary small">
+            <div class="col-6"><i class="bi bi-cpu text-orange me-2"></i>3.0L 6-Cylinder</div>
+            <div class="col-6"><i class="bi bi-speedometer text-orange me-2"></i>395 HP</div>
+            <div class="col-6"><i class="bi bi-gear-wide-connected text-orange me-2"></i>8-Speed Auto</div>
+            <div class="col-6"><i class="bi bi-lightning text-orange me-2"></i>AWD Diesel</div>
+          </div>
+          <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top border-secondary border-opacity-10">
+            <span class="fw-bold text-white fs-5">₹ 1.69 Crore</span>
+            <button class="btn btn-sm btn-orange open-inquiry-modal" data-car="Range Rover Sport">Inquire</button>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- 🚗 Car 5 -->
-    <div class="col-md-4">
-      <div class="card shadow-lg border-0 rounded-4 overflow-hidden h-100">
-        <img src="https://images.pexels.com/photos/1149831/pexels-photo-1149831.jpeg"
-             class="card-img-top" style="height:230px; object-fit:cover;">
-        <div class="card-body text-center">
-          <h5 class="fw-bold">Kia Seltos 2025</h5>
-          <p class="text-muted">Sporty, premium, and built to impress — the perfect urban SUV.</p>
-          <p class="fw-semibold text-warning mb-0">₹ 13.9 Lakh</p>
+    <div class="col-lg-4 col-md-6">
+      <div class="card shadow-lg border-0 rounded-4 overflow-hidden h-100 d-flex flex-column">
+        <div class="position-relative">
+          <img src="https://images.unsplash.com/photo-1617531653332-bd46c24f2068?auto=format&fit=crop&w=600&q=80"
+               class="card-img-top" style="height:240px; object-fit:cover;" alt="BMW M4">
+          <span class="position-absolute top-0 end-0 m-3 badge bg-orange">Top Performance</span>
+        </div>
+        <div class="card-body p-4 d-flex flex-column">
+          <h5 class="fw-bold text-white mb-2">BMW M4 Competition</h5>
+          <p class="text-secondary small flex-grow-1">Sporty high-performance coupe with bold styling, adaptive M chassis suspension, and track precision configuration.</p>
+          <div class="row g-2 mb-3 text-secondary small">
+            <div class="col-6"><i class="bi bi-cpu text-orange me-2"></i>3.0L Twin-Turbo</div>
+            <div class="col-6"><i class="bi bi-speedometer text-orange me-2"></i>503 HP</div>
+            <div class="col-6"><i class="bi bi-gear-wide-connected text-orange me-2"></i>8-Speed M Steptronic</div>
+            <div class="col-6"><i class="bi bi-lightning text-orange me-2"></i>Petrol</div>
+          </div>
+          <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top border-secondary border-opacity-10">
+            <span class="fw-bold text-white fs-5">₹ 1.48 Crore</span>
+            <button class="btn btn-sm btn-orange open-inquiry-modal" data-car="BMW M4 Competition">Inquire</button>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- 🚗 Car 6 -->
-    <div class="col-md-4">
-      <div class="card shadow-lg border-0 rounded-4 overflow-hidden h-100">
-        <img src="https://images.pexels.com/photos/337909/pexels-photo-337909.jpeg"
-             class="card-img-top" style="height:230px; object-fit:cover;">
-        <div class="card-body text-center">
-          <h5 class="fw-bold">Toyota Fortuner</h5>
-          <p class="text-muted">A true beast on and off the road — unmatched power and style.</p>
-          <p class="fw-semibold text-warning mb-0">₹ 35.2 Lakh</p>
+    <div class="col-lg-4 col-md-6">
+      <div class="card shadow-lg border-0 rounded-4 overflow-hidden h-100 d-flex flex-column">
+        <div class="position-relative">
+          <img src="https://images.unsplash.com/photo-1611245598687-faec5b364426?auto=format&fit=crop&w=600&q=80"
+               class="card-img-top" style="height:240px; object-fit:cover;" alt="Audi RS e-tron GT">
+          <span class="position-absolute top-0 end-0 m-3 badge bg-success text-white">Electric GT</span>
+        </div>
+        <div class="card-body p-4 d-flex flex-column">
+          <h5 class="fw-bold text-white mb-2">Audi RS e-tron GT</h5>
+          <p class="text-secondary small flex-grow-1">Pure electric Grand Tourer with breathtaking performance, matrix LED lights, and acoustic sound module.</p>
+          <div class="row g-2 mb-3 text-secondary small">
+            <div class="col-6"><i class="bi bi-battery-charging text-orange me-2"></i>93.4 kWh</div>
+            <div class="col-6"><i class="bi bi-speedometer text-orange me-2"></i>637 HP</div>
+            <div class="col-6"><i class="bi bi-gear-wide-connected text-orange me-2"></i>2-Speed Auto</div>
+            <div class="col-6"><i class="bi bi-lightning text-orange me-2"></i>Electric</div>
+          </div>
+          <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top border-secondary border-opacity-10">
+            <span class="fw-bold text-white fs-5">₹ 1.95 Crore</span>
+            <button class="btn btn-sm btn-orange open-inquiry-modal" data-car="Audi RS e-tron GT">Inquire</button>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<!-- Inquiry Modal -->
+<div class="modal fade" id="inquiryModal" tabindex="-1" aria-labelledby="inquiryModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-card border-secondary border-opacity-20 rounded-4 text-white">
+      <div class="modal-header border-bottom border-secondary border-opacity-10">
+        <h5 class="modal-title fw-bold" id="inquiryModalLabel">Vehicle Inquiry</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4">
+        <p class="text-secondary small">Submit your details to request custom quotations, pricing packages, and schedule a private showroom viewing.</p>
+        <form id="showroomInquiryForm">
+          <div class="mb-3">
+            <label class="form-label text-secondary small">Vehicle Selected</label>
+            <input type="text" class="form-control bg-dark border-secondary text-white border-opacity-30" id="inquiryVehicleName" readonly>
+          </div>
+          <div class="mb-3">
+            <label for="userName" class="form-label text-secondary small">Full Name</label>
+            <input type="text" class="form-control bg-dark border-secondary text-white border-opacity-30" id="userName" placeholder="Enter your name" required>
+          </div>
+          <div class="mb-3">
+            <label for="userEmail" class="form-label text-secondary small">Email Address</label>
+            <input type="email" class="form-control bg-dark border-secondary text-white border-opacity-30" id="userEmail" placeholder="name@example.com" required>
+          </div>
+          <div class="mb-3">
+            <label for="userPhone" class="form-label text-secondary small">Phone Number</label>
+            <input type="tel" class="form-control bg-dark border-secondary text-white border-opacity-30" id="userPhone" placeholder="+91 9999999999" required>
+          </div>
+          <div class="text-center mt-4">
+            <button type="submit" class="btn btn-orange w-100">Submit Showroom Inquiry</button>
+          </div>
+        </form>
+        <div class="alert alert-success mt-3 d-none" id="inquiryAlert">
+          <i class="bi bi-check-circle-fill me-2"></i> Inquiry submitted successfully! Our representative will call you shortly.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Trigger JavaScript -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const inquiryButtons = document.querySelectorAll('.open-inquiry-modal');
+    const vehicleInput = document.getElementById('inquiryVehicleName');
+    const inquiryForm = document.getElementById('showroomInquiryForm');
+    const inquiryAlert = document.getElementById('inquiryAlert');
+    const modalElement = document.getElementById('inquiryModal');
+    let bsModal;
+
+    if (typeof bootstrap !== 'undefined') {
+      bsModal = new bootstrap.Modal(modalElement);
+    }
+
+    inquiryButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const carName = this.getAttribute('data-car');
+        vehicleInput.value = carName;
+        inquiryAlert.classList.add('d-none');
+        inquiryForm.reset();
+        
+        if (bsModal) {
+          bsModal.show();
+        }
+      });
+    });
+
+    inquiryForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      inquiryAlert.classList.remove('d-none');
+      setTimeout(() => {
+        if (bsModal) {
+          bsModal.hide();
+        }
+      }, 2000);
+    });
+  });
+</script>
+
 {% endblock body %}

@@ -3,73 +3,279 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> {% block title %}{% endblock title %} |  Rishi Garage</title>
+    <title>{% block title %}{% endblock title %} | Rishi Garage</title>
 
-    <!-- ✅ Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Google Fonts: Outfit & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- ✅ Custom CSS for orange color -->
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Premium Custom Styles -->
     <style>
-      .card:hover {
-  transform: scale(1.03);
-  transition: 0.3s ease-in-out;
-}
-      .text-orange {
-        color: #ff7f32 !important;
+      :root {
+        --bg-dark: #070913;
+        --bg-card: #0f1322;
+        --accent-orange: #ff6b00;
+        --accent-orange-hover: #e55a00;
+        --accent-orange-glow: rgba(255, 107, 0, 0.25);
+        --text-primary: #f3f4f6;
+        --text-secondary: #9ca3af;
+        --glass-bg: rgba(15, 19, 34, 0.85);
+        --glass-border: rgba(255, 255, 255, 0.07);
+        --card-border: rgba(255, 255, 255, 0.05);
+        --transition-base: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
       }
-      .btn-outline-orange {
-        color: #ff7f32;
-        border-color: #ff7f32;  
+
+      body {
+        background-color: var(--bg-dark);
+        color: var(--text-primary);
+        font-family: 'Inter', sans-serif;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
       }
-      .btn-outline-orange:hover {
-        background-color: #ff7f32;
+
+      h1, h2, h3, h4, h5, h6, .navbar-brand {
+        font-family: 'Outfit', sans-serif;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+      }
+
+      /* Navbar */
+      .glass-nav {
+        background: var(--glass-bg);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border-bottom: 1px solid var(--glass-border);
+        transition: var(--transition-base);
+        z-index: 1050;
+      }
+
+      .navbar-brand {
+        font-size: 1.5rem;
+        background: linear-gradient(135deg, #fff 40%, var(--accent-orange) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .nav-link {
+        font-weight: 500;
+        color: var(--text-secondary) !important;
+        transition: var(--transition-base);
+        position: relative;
+        padding: 0.5rem 1rem !important;
+      }
+
+      .nav-link:hover, .nav-link.active {
+        color: #fff !important;
+      }
+
+      .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background-color: var(--accent-orange);
+        transition: var(--transition-base);
+        transform: translateX(-50%);
+      }
+
+      .nav-link:hover::after, .nav-link.active::after {
+        width: 70%;
+      }
+
+      .dropdown-menu {
+        background-color: var(--bg-card);
+        border: 1px solid var(--glass-border);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      }
+
+      .dropdown-item {
+        color: var(--text-secondary);
+        transition: var(--transition-base);
+        font-weight: 500;
+      }
+
+      .dropdown-item:hover {
+        background-color: var(--accent-orange-glow);
         color: #fff;
+      }
+
+      /* Custom Buttons */
+      .btn-orange {
+        background-color: var(--accent-orange);
+        color: #fff;
+        font-weight: 600;
+        border: none;
+        transition: var(--transition-base);
+        padding: 0.6rem 1.5rem;
+        border-radius: 8px;
+      }
+
+      .btn-orange:hover {
+        background-color: var(--accent-orange-hover);
+        box-shadow: 0 0 15px var(--accent-orange-glow);
+        color: #fff;
+      }
+
+      .btn-outline-orange {
+        background-color: transparent;
+        color: var(--accent-orange);
+        border: 2px solid var(--accent-orange);
+        font-weight: 600;
+        transition: var(--transition-base);
+        padding: 0.6rem 1.5rem;
+        border-radius: 8px;
+      }
+
+      .btn-outline-orange:hover {
+        background-color: var(--accent-orange);
+        color: #fff;
+        box-shadow: 0 0 15px var(--accent-orange-glow);
+      }
+
+      /* Cards Styling */
+      .card {
+        background-color: var(--bg-card);
+        border: 1px solid var(--card-border);
+        color: var(--text-primary);
+        transition: var(--transition-base);
+      }
+
+      .card:hover {
+        transform: translateY(-8px);
+        border-color: rgba(255, 107, 0, 0.4);
+        box-shadow: 0 12px 30px rgba(255, 107, 0, 0.1);
+      }
+
+      /* Utilities */
+      .text-orange {
+        color: var(--accent-orange) !important;
+      }
+
+      .bg-dark-section {
+        background-color: var(--bg-dark);
+      }
+
+      .bg-card-section {
+        background-color: var(--bg-card);
+      }
+
+      /* Hover Links for Footer */
+      .hover-orange {
+        transition: var(--transition-base);
+      }
+      .hover-orange:hover {
+        color: var(--accent-orange) !important;
+        transform: translateX(3px);
       }
     </style>
   </head>
   <body>
-    <!-- ✅ Dark Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
-      <div class="container-fluid">
-        <a class="navbar-brand fw-bold text-orange" href="#">Rishi Garage</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- Glassmorphic Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top glass-nav py-3">
+      <div class="container">
+        <a class="navbar-brand fw-bold d-flex align-items-center" href="/">
+          <i class="bi bi-gear-wide-connected text-orange me-2"></i>Rishi Garage
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-2">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/">Home</a>
+              <a class="nav-link {% if request.path == '/' %}active{% endif %}" aria-current="page" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/about">About Us</a>
+              <a class="nav-link {% if request.path == '/about' %}active{% endif %}" href="/about">About Us</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="/service" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle {% if request.path == '/service' or request.path == '/newvehicles' or request.path == '/usedvehicles' or request.path == '/repair' %}active{% endif %}" href="/service" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Services
               </a>
               <ul class="dropdown-menu dropdown-menu-dark">
-                <li><a class="dropdown-item" href="/service">New Vehicles</a></li>
-                <li><a class="dropdown-item" href="#">Repair</a></li>
-                <li><a class="dropdown-item" href="#">Used Vehicles</a></li>
+                <li><a class="dropdown-item" href="/service">Our Services</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <li><a class="dropdown-item" href="/newvehicles">New Vehicles</a></li>
+                <li><a class="dropdown-item" href="/repair">Repair & Maintenance</a></li>
+                <li><a class="dropdown-item" href="/usedvehicles">Used Vehicles</a></li>
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/contact">Contact Us</a>
+              <a class="nav-link {% if request.path == '/contact' %}active{% endif %}" href="/contact">Contact Us</a>
             </li>
           </ul>
 
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-orange" type="submit">Search</button>
-          </form>
+          <div class="ms-lg-3 d-none d-lg-block">
+            <a href="/contact" class="btn btn-orange">Book Appointment</a>
+          </div>
         </div>
       </div>
     </nav>
-{% block body %} {% endblock body %}
-    <!-- ✅ Only include Bootstrap Bundle JS (includes Popper) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <!-- Main Body Block -->
+    {% block body %} {% endblock body %}
+
+    <!-- Premium Footer -->
+    <footer class="footer mt-auto py-5 bg-card-section border-top border-secondary border-opacity-10">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <h5 class="text-orange mb-3"><i class="bi bi-gear-wide-connected me-2"></i>Rishi Garage</h5>
+            <p class="text-secondary small">Your ultimate destination for professional car repair, quality maintenance, and certified premium vehicles. We keep you moving safely.</p>
+            <div class="d-flex gap-3 mt-3">
+              <a href="#" class="text-secondary hover-orange"><i class="bi bi-facebook fs-5"></i></a>
+              <a href="#" class="text-secondary hover-orange"><i class="bi bi-instagram fs-5"></i></a>
+              <a href="#" class="text-secondary hover-orange"><i class="bi bi-twitter-x fs-5"></i></a>
+              <a href="#" class="text-secondary hover-orange"><i class="bi bi-youtube fs-5"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <h6 class="text-white mb-3">Quick Links</h6>
+            <ul class="list-unstyled small">
+              <li class="mb-2"><a href="/" class="text-secondary text-decoration-none hover-orange">Home</a></li>
+              <li class="mb-2"><a href="/about" class="text-secondary text-decoration-none hover-orange">About Us</a></li>
+              <li class="mb-2"><a href="/service" class="text-secondary text-decoration-none hover-orange">Services</a></li>
+              <li class="mb-2"><a href="/contact" class="text-secondary text-decoration-none hover-orange">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h6 class="text-white mb-3">Our Offerings</h6>
+            <ul class="list-unstyled small">
+              <li class="mb-2"><a href="/newvehicles" class="text-secondary text-decoration-none hover-orange">New Vehicles</a></li>
+              <li class="mb-2"><a href="/repair" class="text-secondary text-decoration-none hover-orange">Diagnostics & Repair</a></li>
+              <li class="mb-2"><a href="/usedvehicles" class="text-secondary text-decoration-none hover-orange">Used Cars Portal</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h6 class="text-white mb-3">Contact Info</h6>
+            <ul class="list-unstyled small text-secondary">
+              <li class="mb-2"><i class="bi bi-geo-alt text-orange me-2"></i>Taramandal, Gorakhpur, India</li>
+              <li class="mb-2"><i class="bi bi-telephone text-orange me-2"></i>+91 8887728229</li>
+              <li class="mb-2"><i class="bi bi-envelope text-orange me-2"></i>info@rishigarage.com</li>
+              <li class="mb-2"><i class="bi bi-clock text-orange me-2"></i>Mon - Sat: 9 AM - 7 PM</li>
+            </ul>
+          </div>
+        </div>
+        <hr class="my-4 border-secondary border-opacity-10">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+          <span class="text-secondary small">&copy; 2026 Rishi Garage. All rights reserved.</span>
+          <span class="text-secondary small">Performance & Precision.</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

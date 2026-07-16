@@ -1,88 +1,243 @@
 {% extends 'base.html' %}
-{% block title %}Repair & Maintenance{% endblock title %}
+{% block title %}Expert Repair & Maintenance - Rishi Garage{% endblock title %}
 
 {% block body %}
-<!-- ✅ Hero Section -->
-<div class="container-fluid px-0 mb-5 position-relative">
-  <img src="https://images.pexels.com/photos/3806279/pexels-photo-3806279.jpeg"
+
+<!-- Premium Hero Section -->
+<div class="container-fluid px-0 position-relative mb-5">
+  <div class="position-absolute top-0 left-0 w-100 h-100" style="background: linear-gradient(rgba(7, 9, 19, 0.45), rgba(7, 9, 19, 0.85)); z-index: 1;"></div>
+  <img src="https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=1920&q=80"
        class="d-block w-100"
-       alt="Garage Repair"
-       style="height: 400px; object-fit: cover;">
-  <div class="position-absolute top-50 start-50 translate-middle text-center text-white">
-    <h1 class="fw-bold display-5 bg-dark bg-opacity-50 px-4 py-2 rounded">Expert Repair & Maintenance</h1>
+       alt="Garage Workshop Repair"
+       style="height: 420px; object-fit: cover; filter: brightness(0.75);">
+  <div class="position-absolute top-50 start-50 translate-middle text-center text-white" style="z-index: 2; width: 90%; max-width: 800px;">
+    <span class="badge bg-orange mb-3 px-3 py-2 text-uppercase fw-semibold tracking-wider">Certified Technicians</span>
+    <h1 class="fw-extrabold display-4 mb-2">Repair & Maintenance</h1>
+    <p class="lead text-light-50 fs-5 mb-0">From computerized engine diagnostics to professional gearbox restorations, keep your vehicle at absolute peak performance.</p>
   </div>
 </div>
 
-<!-- ✅ Repair Services Section -->
-<div class="container my-5">
-  <h2 class="fw-bold text-center text-warning mb-5">Our Repair & Maintenance Services</h2>
+<!-- Services Showcase -->
+<div class="container my-5 py-4">
+  <div class="text-center mb-5">
+    <h2 class="fw-extrabold text-white display-6">Our Services Suite</h2>
+    <p class="text-secondary max-w-600 mx-auto">Select custom diagnostics, routine oil shifts, or mechanical restorations from our certified package.</p>
+  </div>
 
   <div class="row g-4">
     <!-- Service 1 -->
-    <div class="col-md-4">
-      <div class="card text-center border-0 shadow-lg rounded-4 h-100">
-        <div class="card-body">
-          <i class="bi bi-tools display-4 text-warning mb-3"></i>
-          <h5 class="fw-bold">Engine Diagnostics</h5>
-          <p class="text-muted">Advanced scanning and tuning to ensure peak performance and fuel efficiency.</p>
+    <div class="col-lg-4 col-md-6">
+      <div class="card text-center border-0 shadow-lg rounded-4 h-100" style="background: var(--bg-card); border: 1px solid var(--glass-border) !important;">
+        <div class="card-body p-4">
+          <div class="d-inline-flex align-items-center justify-content-center bg-orange bg-opacity-10 rounded-circle mb-3" style="width: 70px; height: 70px;">
+            <i class="bi bi-cpu text-orange fs-2"></i>
+          </div>
+          <h5 class="fw-bold text-white mb-2">Engine Diagnostics</h5>
+          <p class="text-secondary small mb-0">Computerized OBD ECU scans and digital sensor tuning to optimize engine timing, throttle, and fuel economy.</p>
         </div>
       </div>
     </div>
 
     <!-- Service 2 -->
-    <div class="col-md-4">
-      <div class="card text-center border-0 shadow-lg rounded-4 h-100">
-        <div class="card-body">
-          <i class="bi bi-fan display-4 text-warning mb-3"></i>
-          <h5 class="fw-bold">AC & Cooling System</h5>
-          <p class="text-muted">Keep your vehicle cool with our expert air conditioning maintenance and repair.</p>
+    <div class="col-lg-4 col-md-6">
+      <div class="card text-center border-0 shadow-lg rounded-4 h-100" style="background: var(--bg-card); border: 1px solid var(--glass-border) !important;">
+        <div class="card-body p-4">
+          <div class="d-inline-flex align-items-center justify-content-center bg-orange bg-opacity-10 rounded-circle mb-3" style="width: 70px; height: 70px;">
+            <i class="bi bi-snow text-orange fs-2"></i>
+          </div>
+          <h5 class="fw-bold text-white mb-2">AC & Cooling System</h5>
+          <p class="text-secondary small mb-0">Refrigerant level restoration, cooling coil check, compressor diagnosis, and vent decontamination.</p>
         </div>
       </div>
     </div>
 
     <!-- Service 3 -->
-    <div class="col-md-4">
-      <div class="card text-center border-0 shadow-lg rounded-4 h-100">
-        <div class="card-body">
-          <i class="bi bi-speedometer display-4 text-warning mb-3"></i>
-          <h5 class="fw-bold">Brake & Suspension</h5>
-          <p class="text-muted">Safety first — we offer complete brake, shock, and alignment solutions.</p>
+    <div class="col-lg-4 col-md-6">
+      <div class="card text-center border-0 shadow-lg rounded-4 h-100" style="background: var(--bg-card); border: 1px solid var(--glass-border) !important;">
+        <div class="card-body p-4">
+          <div class="d-inline-flex align-items-center justify-content-center bg-orange bg-opacity-10 rounded-circle mb-3" style="width: 70px; height: 70px;">
+            <i class="bi bi-disc text-orange fs-2"></i>
+          </div>
+          <h5 class="fw-bold text-white mb-2">Brakes & Suspension</h5>
+          <p class="text-secondary small mb-0">Rotor resurfacing, high-end brake pad swaps, suspension bushing checks, and computer alignment.</p>
         </div>
       </div>
     </div>
 
     <!-- Service 4 -->
-    <div class="col-md-4">
-      <div class="card text-center border-0 shadow-lg rounded-4 h-100">
-        <div class="card-body">
-          <i class="bi bi-gear display-4 text-warning mb-3"></i>
-          <h5 class="fw-bold">Transmission Repair</h5>
-          <p class="text-muted">Smooth shifting guaranteed — expert care for manual and automatic gearboxes.</p>
+    <div class="col-lg-4 col-md-6">
+      <div class="card text-center border-0 shadow-lg rounded-4 h-100" style="background: var(--bg-card); border: 1px solid var(--glass-border) !important;">
+        <div class="card-body p-4">
+          <div class="d-inline-flex align-items-center justify-content-center bg-orange bg-opacity-10 rounded-circle mb-3" style="width: 70px; height: 70px;">
+            <i class="bi bi-gear-wide-connected text-orange fs-2"></i>
+          </div>
+          <h5 class="fw-bold text-white mb-2">Transmission Repair</h5>
+          <p class="text-secondary small mb-0">Full dual-clutch transmission mapping, torque converter overhaul, and fluid line pressure checks.</p>
         </div>
       </div>
     </div>
 
     <!-- Service 5 -->
-    <div class="col-md-4">
-      <div class="card text-center border-0 shadow-lg rounded-4 h-100">
-        <div class="card-body">
-          <i class="bi bi-fuel-pump display-4 text-warning mb-3"></i>
-          <h5 class="fw-bold">Oil & Filter Change</h5>
-          <p class="text-muted">Prolong your vehicle’s life with regular oil, filter, and fluid checks.</p>
+    <div class="col-lg-4 col-md-6">
+      <div class="card text-center border-0 shadow-lg rounded-4 h-100" style="background: var(--bg-card); border: 1px solid var(--glass-border) !important;">
+        <div class="card-body p-4">
+          <div class="d-inline-flex align-items-center justify-content-center bg-orange bg-opacity-10 rounded-circle mb-3" style="width: 70px; height: 70px;">
+            <i class="bi bi-droplet text-orange fs-2"></i>
+          </div>
+          <h5 class="fw-bold text-white mb-2">Oil & Filter Change</h5>
+          <p class="text-secondary small mb-0">Premium synthetic motor oil refill, carbon-filter replacement, and digital fluid counter reset.</p>
         </div>
       </div>
     </div>
 
     <!-- Service 6 -->
-    <div class="col-md-4">
-      <div class="card text-center border-0 shadow-lg rounded-4 h-100">
-        <div class="card-body">
-          <i class="bi bi-lightning-charge display-4 text-warning mb-3"></i>
-          <h5 class="fw-bold">Electrical & Battery</h5>
-          <p class="text-muted">We handle all kinds of wiring, lighting, and battery-related issues.</p>
+    <div class="col-lg-4 col-md-6">
+      <div class="card text-center border-0 shadow-lg rounded-4 h-100" style="background: var(--bg-card); border: 1px solid var(--glass-border) !important;">
+        <div class="card-body p-4">
+          <div class="d-inline-flex align-items-center justify-content-center bg-orange bg-opacity-10 rounded-circle mb-3" style="width: 70px; height: 70px;">
+            <i class="bi bi-lightning-charge text-orange fs-2"></i>
+          </div>
+          <h5 class="fw-bold text-white mb-2">Electrical & Battery</h5>
+          <p class="text-secondary small mb-0">Alternator efficiency monitoring, fuse repairs, custom cabling, and certified AGM battery installations.</p>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<!-- Dynamic Price Estimator Section -->
+<section class="py-5 border-top border-secondary border-opacity-10" style="background: linear-gradient(rgba(15, 19, 34, 0.4), rgba(7, 9, 19, 0.9));">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="card border-0 shadow-2xl p-5 rounded-4" style="background: var(--bg-card); border: 1px solid var(--glass-border) !important;">
+          <div class="text-center mb-4">
+            <span class="badge bg-orange mb-2 px-3 py-1 text-uppercase fw-semibold tracking-wider small">Interactive Tool</span>
+            <h3 class="fw-extrabold text-white mb-2">Instant Service Cost Calculator</h3>
+            <p class="text-secondary small">Choose one or more diagnostics options below to receive an instant premium budget estimate.</p>
+          </div>
+
+          <form id="calculatorForm">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="form-check p-3 bg-dark bg-opacity-40 border border-secondary border-opacity-10 rounded-3 transition-hover">
+                  <input class="form-check-input ms-0 me-3 service-checkbox" type="checkbox" id="srvEngine" value="1500">
+                  <label class="form-check-label text-white fw-bold" for="srvEngine">
+                    Engine Diagnostics
+                    <span class="d-block text-secondary small fw-normal">₹1,500</span>
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-check p-3 bg-dark bg-opacity-40 border border-secondary border-opacity-10 rounded-3 transition-hover">
+                  <input class="form-check-input ms-0 me-3 service-checkbox" type="checkbox" id="srvCooling" value="2500">
+                  <label class="form-check-label text-white fw-bold" for="srvCooling">
+                    AC & Cooling System
+                    <span class="d-block text-secondary small fw-normal">₹2,500</span>
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-check p-3 bg-dark bg-opacity-40 border border-secondary border-opacity-10 rounded-3 transition-hover">
+                  <input class="form-check-input ms-0 me-3 service-checkbox" type="checkbox" id="srvBrakes" value="3000">
+                  <label class="form-check-label text-white fw-bold" for="srvBrakes">
+                    Brake & Suspension
+                    <span class="d-block text-secondary small fw-normal">₹3,000</span>
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-check p-3 bg-dark bg-opacity-40 border border-secondary border-opacity-10 rounded-3 transition-hover">
+                  <input class="form-check-input ms-0 me-3 service-checkbox" type="checkbox" id="srvTransmission" value="8000">
+                  <label class="form-check-label text-white fw-bold" for="srvTransmission">
+                    Transmission Repair
+                    <span class="d-block text-secondary small fw-normal">₹8,000</span>
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-check p-3 bg-dark bg-opacity-40 border border-secondary border-opacity-10 rounded-3 transition-hover">
+                  <input class="form-check-input ms-0 me-3 service-checkbox" type="checkbox" id="srvOil" value="1200">
+                  <label class="form-check-label text-white fw-bold" for="srvOil">
+                    Oil & Filter Change
+                    <span class="d-block text-secondary small fw-normal">₹1,200</span>
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-check p-3 bg-dark bg-opacity-40 border border-secondary border-opacity-10 rounded-3 transition-hover">
+                  <input class="form-check-input ms-0 me-3 service-checkbox" type="checkbox" id="srvElectrical" value="1800">
+                  <label class="form-check-label text-white fw-bold" for="srvElectrical">
+                    Electrical & Battery
+                    <span class="d-block text-secondary small fw-normal">₹1,800</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Calculated Display -->
+            <div class="mt-4 p-4 rounded-3 text-center" style="background: rgba(255, 107, 0, 0.05); border: 1px dashed var(--accent-orange);">
+              <h5 class="text-secondary mb-1">Estimated Total Cost</h5>
+              <div class="display-5 fw-extrabold text-white" id="estimatorTotal">₹0</div>
+              <p class="text-secondary small mt-2 mb-0">*This is an initial estimate. Final costs may vary depending on parts configuration and inspection.</p>
+            </div>
+            
+            <div class="text-center mt-4">
+              <a href="/contact" class="btn btn-orange px-5 py-2">Book Appointment</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Custom Styling for Interactive calculator -->
+<style>
+  .transition-hover {
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  .transition-hover:hover {
+    border-color: var(--accent-orange) !important;
+    background: rgba(255, 107, 0, 0.03) !important;
+  }
+  .form-check-input:checked {
+    background-color: var(--accent-orange) !important;
+    border-color: var(--accent-orange) !important;
+  }
+</style>
+
+<!-- Live Calculator Script -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const checkboxes = document.querySelectorAll('.service-checkbox');
+    const totalDisplay = document.getElementById('estimatorTotal');
+
+    function calculateTotal() {
+      let sum = 0;
+      checkboxes.forEach(box => {
+        if (box.checked) {
+          sum += parseInt(box.value);
+        }
+      });
+      totalDisplay.textContent = '₹' + sum.toLocaleString('en-IN');
+    }
+
+    checkboxes.forEach(box => {
+      box.addEventListener('change', calculateTotal);
+      // Allow clicking the card div to toggle check
+      const parentCard = box.closest('.transition-hover');
+      if (parentCard) {
+        parentCard.addEventListener('click', function(e) {
+          if (e.target !== box) {
+            box.checked = !box.checked;
+            calculateTotal();
+          }
+        });
+      }
+    });
+  });
+</script>
+
 {% endblock body %}

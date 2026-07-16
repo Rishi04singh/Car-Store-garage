@@ -1,71 +1,88 @@
 {% extends 'base.html' %}
-{% block title %}Service{% endblock title %}
+{% block title %}Our Services - Professional Automotive Solutions{% endblock title %}
 
 {% block body %}
 
-<!-- ✅ Hero Section -->
-<div class="container-fluid px-0 mb-5 position-relative">
-  <img src="https://images.pexels.com/photos/4480456/pexels-photo-4480456.jpeg"
+<!-- Premium Hero Section -->
+<div class="container-fluid px-0 position-relative mb-5">
+  <div class="position-absolute top-0 left-0 w-100 h-100" style="background: linear-gradient(rgba(7, 9, 19, 0.45), rgba(7, 9, 19, 0.85)); z-index: 1;"></div>
+  <img src="https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=1920&q=80"
        class="d-block w-100"
-       alt="Garage"
-       style="height: 400px; object-fit: cover;">
-  <div class="position-absolute top-50 start-50 translate-middle text-center text-white">
-    <h1 class="fw-bold display-5 bg-dark bg-opacity-50 px-4 py-2 rounded">Our Services</h1>
-    <p class="lead bg-dark bg-opacity-50 px-3 py-1 rounded">Quality, Trust, and Excellence in Every Service</p>
+       alt="Garage Service Center"
+       style="height: 420px; object-fit: cover; filter: brightness(0.8);">
+  <div class="position-absolute top-50 start-50 translate-middle text-center text-white" style="z-index: 2; width: 90%; max-width: 800px;">
+    <span class="badge bg-orange mb-3 px-3 py-2 text-uppercase fw-semibold tracking-wider">Premium Workshop</span>
+    <h1 class="fw-extrabold display-4 mb-2">Automotive Care & Sales</h1>
+    <p class="lead text-light-50 fs-5 mb-0">High-end repair services, custom tuning, and an premium selection of verified new & pre-owned vehicles.</p>
   </div>
 </div>
 
-<!-- ✅ Service Blocks -->
-<div class="container my-5">
-  <div class="row g-5">
+<!-- Service Cards Section -->
+<div class="container my-5 py-4">
+  <div class="row g-4 justify-content-center">
     
-    <!-- 🟠 New Vehicles -->
-    <div class="col-md-4">
-      <div class="card border-0 shadow-lg rounded-4 h-100">
-        <img src="https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg"
-             class="card-img-top rounded-top-4"
-             alt="New Cars"
-             style="height: 220px; object-fit: cover;">
-        <div class="card-body text-center">
-          <h4 class="fw-bold text-warning">New Vehicles</h4>
-          <p class="text-muted">
-            Explore our latest collection of premium vehicles. Whether you’re looking for comfort, performance, or innovation — we have something for everyone.
+    <!-- 1. New Vehicles -->
+    <div class="col-lg-4 col-md-6">
+      <div class="card border-0 shadow-lg rounded-4 h-100 overflow-hidden">
+        <div class="position-relative">
+          <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=600&q=80"
+               class="card-img-top"
+               alt="New Luxury Vehicles"
+               style="height: 240px; object-fit: cover;">
+          <span class="position-absolute bottom-0 start-0 m-3 badge bg-orange">SHOWROOM</span>
+        </div>
+        <div class="card-body p-4 text-center d-flex flex-column">
+          <h4 class="fw-bold text-white mb-3">New Vehicles</h4>
+          <p class="text-secondary small flex-grow-1">
+            Explore our state-of-the-art collection of luxury electric sedans, hybrid crossovers, and high-performance supercars. Available for order and customization.
           </p>
-          <a href="/newvehicles" class="btn btn-outline-warning fw-semibold px-4">Learn More</a>
+          <div class="mt-4">
+            <a href="/newvehicles" class="btn btn-outline-orange w-100 fw-semibold">Browse Showroom</a>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- 🟠 Repair Services -->
-    <div class="col-md-4">
-      <div class="card border-0 shadow-lg rounded-4 h-100">
-        <img src="https://images.pexels.com/photos/3806288/pexels-photo-3806288.jpeg"
-             class="card-img-top rounded-top-4"
-             alt="Car Repair"
-             style="height: 220px; object-fit: cover;">
-        <div class="card-body text-center">
-          <h4 class="fw-bold text-warning">Repair & Maintenance</h4>
-          <p class="text-muted">
-            From oil changes to full engine repairs, our expert mechanics ensure your vehicle stays in top condition. Reliable service with genuine parts.
+    <!-- 2. Repair Services -->
+    <div class="col-lg-4 col-md-6">
+      <div class="card border-0 shadow-lg rounded-4 h-100 overflow-hidden">
+        <div class="position-relative">
+          <img src="https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=600&q=80"
+               class="card-img-top"
+               alt="Car Diagnostics"
+               style="height: 240px; object-fit: cover;">
+          <span class="position-absolute bottom-0 start-0 m-3 badge bg-orange">WORKSHOP</span>
+        </div>
+        <div class="card-body p-4 text-center d-flex flex-column">
+          <h4 class="fw-bold text-white mb-3">Diagnostics & Repair</h4>
+          <p class="text-secondary small flex-grow-1">
+            From digital ECU mapping and regular detailing to brake restoration and engine overhauls. Certified technicians operating with dealer-level equipment.
           </p>
-          <a href="/repair" class="btn btn-outline-warning fw-semibold px-4">Learn More</a>
+          <div class="mt-4">
+            <a href="/repair" class="btn btn-outline-orange w-100 fw-semibold">View Repair Details</a>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- 🟠 Used Vehicles -->
-    <div class="col-md-4">
-      <div class="card border-0 shadow-lg rounded-4 h-100">
-        <img src="https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg"
-             class="card-img-top rounded-top-4"
-             alt="Used Cars"
-             style="height: 220px; object-fit: cover;">
-        <div class="card-body text-center">
-          <h4 class="fw-bold text-warning">Used Vehicles</h4>
-          <p class="text-muted">
-            Buy certified pre-owned cars that look and feel brand new. Each vehicle is inspected and guaranteed for performance and safety.
+    <!-- 3. Used Vehicles -->
+    <div class="col-lg-4 col-md-6">
+      <div class="card border-0 shadow-lg rounded-4 h-100 overflow-hidden">
+        <div class="position-relative">
+          <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=600&q=80"
+               class="card-img-top"
+               alt="Used Vehicles Showroom"
+               style="height: 240px; object-fit: cover;">
+          <span class="position-absolute bottom-0 start-0 m-3 badge bg-orange">CERTIFIED PORTAL</span>
+        </div>
+        <div class="card-body p-4 text-center d-flex flex-column">
+          <h4 class="fw-bold text-white mb-3">Certified Used Cars</h4>
+          <p class="text-secondary small flex-grow-1">
+            Browse our handpicked pre-owned vehicles. Each car undergoes an exhaustive 150-point quality check, including powertrain verification and full body inspection.
           </p>
-        <a href="/usedvehicles" class="btn btn-outline-warning fw-semibold px-4">Learn More</a>
+          <div class="mt-4">
+            <a href="/usedvehicles" class="btn btn-outline-orange w-100 fw-semibold">Browse Used Inventory</a>
+          </div>
         </div>
       </div>
     </div>
@@ -73,11 +90,83 @@
   </div>
 </div>
 
-<!-- ✅ CTA Section -->
-<div class="container-fluid text-center bg-dark text-white py-5 mt-5 rounded-3">
-  <h2 class="fw-bold mb-3">Need Expert Help?</h2>
-  <p class="lead mb-4">Book an appointment today and experience professional care for your vehicle at Rishi Garage.</p>
-  <a href="/contact" class="btn btn-warning text-white fw-semibold px-5 py-2">Contact Us</a>
+<!-- FAQ Accordion Section -->
+<section class="py-5 bg-dark-section border-top border-secondary border-opacity-10">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="display-5 fw-extrabold text-white mb-2">Frequently Asked Questions</h2>
+      <p class="text-secondary max-w-600 mx-auto">Get quick answers regarding bookings, parts warranties, and vehicle test drives.</p>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="accordion accordion-flush" id="faqAccordion">
+          
+          <div class="accordion-item bg-transparent border-bottom border-secondary border-opacity-15 py-3">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed bg-transparent text-white fw-bold shadow-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne" aria-expanded="false">
+                What warranty do you offer on replacement parts?
+              </button>
+            </h2>
+            <div id="faqOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body text-secondary small">
+                All OEM replacement parts installed at Rishi Garage come with a 12-month / 15,000 km warranty. We only use authentic components sourced directly from certified brand distributors.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item bg-transparent border-bottom border-secondary border-opacity-15 py-3">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed bg-transparent text-white fw-bold shadow-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo" aria-expanded="false">
+                Can I book a same-day diagnostics check?
+              </button>
+            </h2>
+            <div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body text-secondary small">
+                Yes, we support express diagnostics booking. Please submit a request on our contact page or call us before 11:00 AM to secure a same-day diagnosis and analysis window.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item bg-transparent border-0 py-3">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed bg-transparent text-white fw-bold shadow-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree" aria-expanded="false">
+                Do you provide vehicle registration handling for new purchases?
+              </button>
+            </h2>
+            <div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body text-secondary small">
+                Absolutely. Our dealership team handles all state registration paperwork, tax assessments, insurance setups, and license plate deliveries directly to your home.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Styled Accordion Custom CSS -->
+<style>
+  .accordion-button:not(.collapsed) {
+    color: var(--accent-orange) !important;
+    background-color: transparent !important;
+  }
+  .accordion-button::after {
+    filter: invert(1);
+  }
+</style>
+
+<!-- Call-to-Action -->
+<div class="container my-5 py-4">
+  <div class="card border-0 rounded-4 text-center p-5 position-relative overflow-hidden" style="background: linear-gradient(135deg, var(--bg-card) 0%, rgba(255, 107, 0, 0.05) 100%); border: 1px solid var(--glass-border) !important;">
+    <h2 class="fw-bold text-white mb-3">Need Expert Advice on Your Vehicle?</h2>
+    <p class="text-secondary max-w-600 mx-auto mb-4">Book an appointment online, and let our professional automotive engineers inspect and optimize your car's performance.</p>
+    <div class="d-flex justify-content-center gap-3">
+      <a href="/contact" class="btn btn-orange px-4 py-2">Book Appointment Now</a>
+    </div>
+  </div>
 </div>
 
 {% endblock body %}

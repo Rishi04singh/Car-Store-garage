@@ -1,91 +1,199 @@
 {% extends 'base.html' %}
-{% block title %}Used Vehicles{% endblock title %}
+{% block title %}Certified Pre-Owned Vehicles - Rishi Garage{% endblock title %}
 
 {% block body %}
-<div class="container my-5">
-  <h1 class="text-center fw-bold text-warning mb-5">Certified Used Vehicles</h1>
-  <p class="text-center text-muted mb-5">
-    Drive home reliability and performance at an unbeatable price — every vehicle is fully inspected and certified by Rishi Garage.
-  </p>
+<div class="container my-5 py-3">
+  <div class="text-center mb-5">
+    <span class="badge bg-orange mb-3 px-3 py-2 text-uppercase fw-semibold tracking-wider">Certified Pre-Owned</span>
+    <h1 class="display-4 fw-extrabold text-white mb-2">Verified Pre-Owned Showroom</h1>
+    <p class="text-secondary max-w-600 mx-auto">Drive home reliability at an exceptional value. Every pre-owned vehicle undergoes our rigorous 150-point inspection and comes with a certified warranty.</p>
+  </div>
 
-  <div class="row g-4">
+  <!-- Search & Filter Bar -->
+  <div class="row justify-content-center mb-5">
+    <div class="col-md-6">
+      <div class="input-group">
+        <span class="input-group-text bg-card border-secondary border-opacity-20 text-secondary"><i class="bi bi-search"></i></span>
+        <input type="text" id="usedVehicleSearch" class="form-control bg-card border-secondary border-opacity-20 text-white shadow-none" placeholder="Search by model name (e.g. BMW, Honda)...">
+      </div>
+    </div>
+  </div>
+
+  <div class="row g-4" id="usedVehiclesGrid">
     <!-- 🧩 Vehicle 1 -->
-    <div class="col-md-4">
-      <div class="card shadow-lg border-0 rounded-4 overflow-hidden h-100">
-        <img src="https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg" 
-             class="card-img-top" style="height:230px; object-fit:cover;">
-        <div class="card-body text-center">
-          <h5 class="fw-bold">Hyundai i20 (2020)</h5>
-          <p class="text-muted">Well-maintained hatchback with only 35,000 km. Great for city driving.</p>
-          <p class="fw-semibold text-warning mb-0">₹ 6.8 Lakh</p>
+    <div class="col-lg-4 col-md-6 used-car-col">
+      <div class="card shadow-lg border-0 rounded-4 overflow-hidden h-100 d-flex flex-column">
+        <div class="position-relative">
+          <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=600&q=80" 
+               class="card-img-top" style="height:240px; object-fit:cover;" alt="BMW 3 Series">
+          <span class="position-absolute top-0 end-0 m-3 badge bg-success">PRISTINE</span>
+        </div>
+        <div class="card-body p-4 d-flex flex-column">
+          <h5 class="fw-bold text-white mb-2 car-title">BMW 3 Series (2021)</h5>
+          <p class="text-secondary small flex-grow-1">Single owner, certified service records, immaculate condition inside and out. Sunroof package included.</p>
+          <div class="row g-2 mb-3 text-secondary small">
+            <div class="col-6"><i class="bi bi-calendar3 text-orange me-2"></i>Year: 2021</div>
+            <div class="col-6"><i class="bi bi-speedometer2 text-orange me-2"></i>24,000 km</div>
+            <div class="col-6"><i class="bi bi-person text-orange me-2"></i>1st Owner</div>
+            <div class="col-6"><i class="bi bi-fuel-pump text-orange me-2"></i>Petrol</div>
+          </div>
+          <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top border-secondary border-opacity-10">
+            <span class="fw-bold text-orange fs-5">₹ 42.5 Lakh</span>
+            <a href="/contact?inquire=BMW%203%20Series%202021" class="btn btn-sm btn-orange">Book Test Drive</a>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- 🧩 Vehicle 2 -->
-    <div class="col-md-4">
-      <div class="card shadow-lg border-0 rounded-4 overflow-hidden h-100">
-        <img src="https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg"
-             class="card-img-top" style="height:230px; object-fit:cover;">
-        <div class="card-body text-center">
-          <h5 class="fw-bold">Honda City (2019)</h5>
-          <p class="text-muted">Top model with sunroof and automatic gearbox. Excellent condition.</p>
-          <p class="fw-semibold text-warning mb-0">₹ 9.2 Lakh</p>
+    <div class="col-lg-4 col-md-6 used-car-col">
+      <div class="card shadow-lg border-0 rounded-4 overflow-hidden h-100 d-flex flex-column">
+        <div class="position-relative">
+          <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=600&q=80"
+               class="card-img-top" style="height:240px; object-fit:cover;" alt="Audi A4">
+          <span class="position-absolute top-0 end-0 m-3 badge bg-orange">VERIFIED</span>
+        </div>
+        <div class="card-body p-4 d-flex flex-column">
+          <h5 class="fw-bold text-white mb-2 car-title">Audi A4 Premium (2020)</h5>
+          <p class="text-secondary small flex-grow-1">Top-shelf comfort sedan with virtual cockpit and customized sound system. Inspected powertrain.</p>
+          <div class="row g-2 mb-3 text-secondary small">
+            <div class="col-6"><i class="bi bi-calendar3 text-orange me-2"></i>Year: 2020</div>
+            <div class="col-6"><i class="bi bi-speedometer2 text-orange me-2"></i>32,500 km</div>
+            <div class="col-6"><i class="bi bi-person text-orange me-2"></i>1st Owner</div>
+            <div class="col-6"><i class="bi bi-fuel-pump text-orange me-2"></i>Petrol</div>
+          </div>
+          <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top border-secondary border-opacity-10">
+            <span class="fw-bold text-orange fs-5">₹ 35.8 Lakh</span>
+            <a href="/contact?inquire=Audi%20A4%202020" class="btn btn-sm btn-orange">Book Test Drive</a>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- 🧩 Vehicle 3 -->
-    <div class="col-md-4">
-      <div class="card shadow-lg border-0 rounded-4 overflow-hidden h-100">
-        <img src="https://images.pexels.com/photos/1149831/pexels-photo-1149831.jpeg"
-             class="card-img-top" style="height:230px; object-fit:cover;">
-        <div class="card-body text-center">
-          <h5 class="fw-bold">Tata Harrier (2021)</h5>
-          <p class="text-muted">Stylish SUV with diesel engine and full service record.</p>
-          <p class="fw-semibold text-warning mb-0">₹ 14.8 Lakh</p>
+    <div class="col-lg-4 col-md-6 used-car-col">
+      <div class="card shadow-lg border-0 rounded-4 overflow-hidden h-100 d-flex flex-column">
+        <div class="position-relative">
+          <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=600&q=80"
+               class="card-img-top" style="height:240px; object-fit:cover;" alt="Mini Cooper">
+          <span class="position-absolute top-0 end-0 m-3 badge bg-success">PRISTINE</span>
+        </div>
+        <div class="card-body p-4 d-flex flex-column">
+          <h5 class="fw-bold text-white mb-2 car-title">Mini Cooper S (2019)</h5>
+          <p class="text-secondary small flex-grow-1">Sporty hot hatchback in British Racing Green. Custom alloy wheels, twin exhausts, immaculate condition.</p>
+          <div class="row g-2 mb-3 text-secondary small">
+            <div class="col-6"><i class="bi bi-calendar3 text-orange me-2"></i>Year: 2019</div>
+            <div class="col-6"><i class="bi bi-speedometer2 text-orange me-2"></i>18,200 km</div>
+            <div class="col-6"><i class="bi bi-person text-orange me-2"></i>2nd Owner</div>
+            <div class="col-6"><i class="bi bi-fuel-pump text-orange me-2"></i>Petrol</div>
+          </div>
+          <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top border-secondary border-opacity-10">
+            <span class="fw-bold text-orange fs-5">₹ 29.5 Lakh</span>
+            <a href="/contact?inquire=Mini%20Cooper%20S%202019" class="btn btn-sm btn-orange">Book Test Drive</a>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- 🧩 Vehicle 4 -->
-    <div class="col-md-4">
-      <div class="card shadow-lg border-0 rounded-4 overflow-hidden h-100">
-        <img src="https://images.pexels.com/photos/358070/pexels-photo-358070.jpeg"
-             class="card-img-top" style="height:230px; object-fit:cover;">
-        <div class="card-body text-center">
-          <h5 class="fw-bold">Maruti Swift Dzire (2018)</h5>
-          <p class="text-muted">Reliable sedan with low running cost and smooth drive.</p>
-          <p class="fw-semibold text-warning mb-0">₹ 5.9 Lakh</p>
+    <div class="col-lg-4 col-md-6 used-car-col">
+      <div class="card shadow-lg border-0 rounded-4 overflow-hidden h-100 d-flex flex-column">
+        <div class="position-relative">
+          <img src="https://images.unsplash.com/photo-1616422285623-13ff0162193c?auto=format&fit=crop&w=600&q=80"
+               class="card-img-top" style="height:240px; object-fit:cover;" alt="Fortuner">
+          <span class="position-absolute top-0 end-0 m-3 badge bg-orange">VERIFIED</span>
+        </div>
+        <div class="card-body p-4 d-flex flex-column">
+          <h5 class="fw-bold text-white mb-2 car-title">Toyota Fortuner (2018)</h5>
+          <p class="text-secondary small flex-grow-1">True 4x4 offroader beast. High durability, full brand service record, new tyres recently fitted.</p>
+          <div class="row g-2 mb-3 text-secondary small">
+            <div class="col-6"><i class="bi bi-calendar3 text-orange me-2"></i>Year: 2018</div>
+            <div class="col-6"><i class="bi bi-speedometer2 text-orange me-2"></i>76,000 km</div>
+            <div class="col-6"><i class="bi bi-person text-orange me-2"></i>1st Owner</div>
+            <div class="col-6"><i class="bi bi-fuel-pump text-orange me-2"></i>Diesel 4x4</div>
+          </div>
+          <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top border-secondary border-opacity-10">
+            <span class="fw-bold text-orange fs-5">₹ 24.9 Lakh</span>
+            <a href="/contact?inquire=Toyota%20Fortuner%202018" class="btn btn-sm btn-orange">Book Test Drive</a>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- 🧩 Vehicle 5 -->
-    <div class="col-md-4">
-      <div class="card shadow-lg border-0 rounded-4 overflow-hidden h-100">
-        <img src="https://images.pexels.com/photos/337909/pexels-photo-337909.jpeg"
-             class="card-img-top" style="height:230px; object-fit:cover;">
-        <div class="card-body text-center">
-          <h5 class="fw-bold">Mahindra Scorpio (2019)</h5>
-          <p class="text-muted">Perfect for adventure lovers. Strong engine and great road presence.</p>
-          <p class="fw-semibold text-warning mb-0">₹ 11.5 Lakh</p>
+    <div class="col-lg-4 col-md-6 used-car-col">
+      <div class="card shadow-lg border-0 rounded-4 overflow-hidden h-100 d-flex flex-column">
+        <div class="position-relative">
+          <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=600&q=80"
+               class="card-img-top" style="height:240px; object-fit:cover;" alt="Honda City">
+          <span class="position-absolute top-0 end-0 m-3 badge bg-orange">VERIFIED</span>
+        </div>
+        <div class="card-body p-4 d-flex flex-column">
+          <h5 class="fw-bold text-white mb-2 car-title">Honda City i-VTEC (2019)</h5>
+          <p class="text-secondary small flex-grow-1">Top variant ZX manual with sunroof. Perfect family sedan, high mileage efficiency and low maintenance.</p>
+          <div class="row g-2 mb-3 text-secondary small">
+            <div class="col-6"><i class="bi bi-calendar3 text-orange me-2"></i>Year: 2019</div>
+            <div class="col-6"><i class="bi bi-speedometer2 text-orange me-2"></i>42,000 km</div>
+            <div class="col-6"><i class="bi bi-person text-orange me-2"></i>1st Owner</div>
+            <div class="col-6"><i class="bi bi-fuel-pump text-orange me-2"></i>Petrol</div>
+          </div>
+          <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top border-secondary border-opacity-10">
+            <span class="fw-bold text-orange fs-5">₹ 8.5 Lakh</span>
+            <a href="/contact?inquire=Honda%20City%202019" class="btn btn-sm btn-orange">Book Test Drive</a>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- 🧩 Vehicle 6 -->
-    <div class="col-md-4">
-      <div class="card shadow-lg border-0 rounded-4 overflow-hidden h-100">
-        <img src="https://images.pexels.com/photos/210182/pexels-photo-210182.jpeg"
-             class="card-img-top" style="height:230px; object-fit:cover;">
-        <div class="card-body text-center">
-          <h5 class="fw-bold">Kia Sonet (2021)</h5>
-          <p class="text-muted">Compact SUV with all features and just 25,000 km driven.</p>
-          <p class="fw-semibold text-warning mb-0">₹ 10.9 Lakh</p>
+    <div class="col-lg-4 col-md-6 used-car-col">
+      <div class="card shadow-lg border-0 rounded-4 overflow-hidden h-100 d-flex flex-column">
+        <div class="position-relative">
+          <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=600&q=80"
+               class="card-img-top" style="height:240px; object-fit:cover;" alt="Jeep Compass">
+          <span class="position-absolute top-0 end-0 m-3 badge bg-orange">VERIFIED</span>
+        </div>
+        <div class="card-body p-4 d-flex flex-column">
+          <h5 class="fw-bold text-white mb-2 car-title">Jeep Compass Limited (2020)</h5>
+          <p class="text-secondary small flex-grow-1">Stylish and rugged premium SUV with touchscreen interface, dual-zone climate control, and certified checks.</p>
+          <div class="row g-2 mb-3 text-secondary small">
+            <div class="col-6"><i class="bi bi-calendar3 text-orange me-2"></i>Year: 2020</div>
+            <div class="col-6"><i class="bi bi-speedometer2 text-orange me-2"></i>38,000 km</div>
+            <div class="col-6"><i class="bi bi-person text-orange me-2"></i>1st Owner</div>
+            <div class="col-6"><i class="bi bi-fuel-pump text-orange me-2"></i>Diesel</div>
+          </div>
+          <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top border-secondary border-opacity-10">
+            <span class="fw-bold text-orange fs-5">₹ 16.9 Lakh</span>
+            <a href="/contact?inquire=Jeep%20Compass%202020" class="btn btn-sm btn-orange">Book Test Drive</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<!-- Vanilla JS for Live Searching -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('usedVehicleSearch');
+    const vehicleCols = document.querySelectorAll('.used-car-col');
+
+    searchInput.addEventListener('keyup', function() {
+      const filterValue = this.value.toLowerCase().trim();
+
+      vehicleCols.forEach(col => {
+        const titleElement = col.querySelector('.car-title');
+        const titleText = titleElement.textContent.toLowerCase();
+
+        if (titleText.includes(filterValue)) {
+          col.style.display = 'block';
+          col.style.opacity = '1';
+        } else {
+          col.style.opacity = '0';
+          col.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
 {% endblock body %}

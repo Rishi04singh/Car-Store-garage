@@ -1,93 +1,119 @@
 {% extends 'base.html' %}
-{% block title %}Contact{% endblock title %}
+{% block title %}Contact Us - Rishi Garage{% endblock title %}
 
 {% block body %}
 
-<!-- ✅ Hero Section -->
-<div class="container-fluid px-0 mb-5 position-relative">
-  <img src="https://images.pexels.com/photos/190537/pexels-photo-190537.jpeg"
+<!-- Premium Hero Section -->
+<div class="container-fluid px-0 position-relative mb-5">
+  <div class="position-absolute top-0 left-0 w-100 h-100" style="background: linear-gradient(rgba(7, 9, 19, 0.45), rgba(7, 9, 19, 0.85)); z-index: 1;"></div>
+  <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=80"
        class="d-block w-100"
-       alt="Car"
-       style="height: 450px; object-fit: cover;">
-  <div class="position-absolute top-50 start-50 translate-middle text-center text-white">
-    <h1 class="fw-bold display-5 bg-dark bg-opacity-50 px-4 py-2 rounded">Contact Rishi Garage</h1>
-    <p class="lead bg-dark bg-opacity-50 px-3 py-1 rounded">We’re here to help you with all your vehicle needs</p>
+       alt="Contact Rishi Garage"
+       style="height: 420px; object-fit: cover; filter: brightness(0.7);">
+  <div class="position-absolute top-50 start-50 translate-middle text-center text-white" style="z-index: 2; width: 90%; max-width: 800px;">
+    <span class="badge bg-orange mb-3 px-3 py-2 text-uppercase fw-semibold tracking-wider">Support Center</span>
+    <h1 class="fw-extrabold display-4 mb-2">Connect With Us</h1>
+    <p class="lead text-light-50 fs-5 mb-0">Reach our sales team or workshop diagnostics engineers. We're here to answer any inquiries within 24 hours.</p>
   </div>
 </div>
 
-<!-- ✅ Contact Info + Form Section -->
-<div class="container my-5">
-  <div class="row g-4">
+<!-- Contact Info + Form Section -->
+<div class="container my-5 py-3">
+  <div class="row g-5">
     
     <!-- Left: Info -->
-    <div class="col-md-5">
-      <h2 class="mb-4 fw-bold text-warning">Get in Touch</h2>
-      <p>Have questions about our services, vehicles, or repairs? Fill out the form or reach us through the following details.</p>
+    <div class="col-lg-5">
+      <h2 class="fw-extrabold text-white mb-4">Get in Touch</h2>
+      <p class="text-secondary leading-relaxed mb-4">Have questions about our certified used models, customized garage diagnostics, or repair packages? Fill out the contact form or call our central support line.</p>
 
-      <ul class="list-unstyled mt-4">
-        <li class="mb-3">
-          <i class="bi bi-geo-alt-fill text-warning me-2"></i>
-          <strong>Address:</strong> Taramandal , Gorakhpur India
-        </li>
-        <li class="mb-3">
-          <i class="bi bi-telephone-fill text-warning me-2"></i>
-          <strong>Phone:</strong> +91 8887728229
-        </li>
-        <li class="mb-3">
-          <i class="bi bi-envelope-fill text-warning me-2"></i>
-          <strong>Email:</strong> info@rishigarage.com
-        </li>
-        <li class="mb-3">
-          <i class="bi bi-clock-fill text-warning me-2"></i>
-          <strong>Hours:</strong> Mon–Sat, 9:00 AM – 7:00 PM
-        </li>
-      </ul>
+      <div class="d-flex flex-column gap-4 mt-5">
+        <div class="d-flex align-items-center gap-3">
+          <div class="d-flex align-items-center justify-content-center bg-orange bg-opacity-10 rounded-circle" style="width: 55px; height: 55px; flex-shrink: 0;">
+            <i class="bi bi-geo-alt text-orange fs-4"></i>
+          </div>
+          <div>
+            <h6 class="text-white fw-bold mb-0">Workshop Location</h6>
+            <p class="text-secondary small mb-0">Taramandal, Gorakhpur, Uttar Pradesh, India</p>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center gap-3">
+          <div class="d-flex align-items-center justify-content-center bg-orange bg-opacity-10 rounded-circle" style="width: 55px; height: 55px; flex-shrink: 0;">
+            <i class="bi bi-telephone text-orange fs-4"></i>
+          </div>
+          <div>
+            <h6 class="text-white fw-bold mb-0">Phone Support</h6>
+            <p class="text-secondary small mb-0">+91 8887728229</p>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center gap-3">
+          <div class="d-flex align-items-center justify-content-center bg-orange bg-opacity-10 rounded-circle" style="width: 55px; height: 55px; flex-shrink: 0;">
+            <i class="bi bi-envelope text-orange fs-4"></i>
+          </div>
+          <div>
+            <h6 class="text-white fw-bold mb-0">Email Queries</h6>
+            <p class="text-secondary small mb-0">info@rishigarage.com</p>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center gap-3">
+          <div class="d-flex align-items-center justify-content-center bg-orange bg-opacity-10 rounded-circle" style="width: 55px; height: 55px; flex-shrink: 0;">
+            <i class="bi bi-clock text-orange fs-4"></i>
+          </div>
+          <div>
+            <h6 class="text-white fw-bold mb-0">Operating Hours</h6>
+            <p class="text-secondary small mb-0">Monday – Saturday: 9:00 AM – 7:00 PM</p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Right: Form -->
-    <div class="col-md-7">
-      <div class="card shadow-lg border-0 rounded-4">
-        <div class="card-body p-4">
-          <h3 class="mb-4 text-center text-dark fw-semibold">Send us a Message</h3>
+    <div class="col-lg-7">
+      <div class="card border-0 shadow-lg p-4 rounded-4" style="background: var(--bg-card); border: 1px solid var(--glass-border) !important;">
+        <div class="card-body p-2">
+          <h3 class="fw-bold text-white mb-4">Send us a Message</h3>
 
-          <!-- ✅ Success Message Alert -->
+          <!-- Success Message Alert -->
           {% if messages %}
-            <div class="container mb-3">
+            <div class="container mb-3 px-0">
               {% for message in messages %}
-                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <div class="alert alert-success alert-dismissible fade show border-0 rounded-3 text-white bg-success bg-opacity-15" role="alert">
+                  <i class="bi bi-check-circle-fill me-2 text-success"></i>
                   {{ message }}
-                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
               {% endfor %}
             </div>
           {% endif %}
 
-          <!-- ✅ Contact Form -->
-          <form method="POST" action="/contact">
+          <!-- Contact Form -->
+          <form method="POST" action="/contact" id="contactForm">
             {% csrf_token %}
             
             <div class="mb-3">
-              <label for="name" class="form-label">Your Name</label>
-              <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+              <label for="name" class="form-label text-secondary small">Your Name</label>
+              <input type="text" class="form-control bg-dark border-secondary text-white border-opacity-30" id="name" name="name" placeholder="Enter your name" required style="border-radius: 8px;">
             </div>
 
             <div class="mb-3">
-              <label for="email" class="form-label">Email address</label>
-              <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required>
+              <label for="email" class="form-label text-secondary small">Email Address</label>
+              <input type="email" class="form-control bg-dark border-secondary text-white border-opacity-30" id="email" name="email" placeholder="name@example.com" required style="border-radius: 8px;">
             </div>
 
             <div class="mb-3">
-              <label for="phone" class="form-label">Phone Number</label>
-              <input type="text" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" required>
+              <label for="phone" class="form-label text-secondary small">Phone Number</label>
+              <input type="text" class="form-control bg-dark border-secondary text-white border-opacity-30" id="phone" name="phone" placeholder="Enter your phone number" required style="border-radius: 8px;">
             </div>
 
             <div class="mb-3">
-              <label for="message" class="form-label">Message</label>
-              <textarea class="form-control" id="message" name="message" rows="4" placeholder="Write your message..." required></textarea>
+              <label for="message" class="form-label text-secondary small">Your Message / Inquiry Detail</label>
+              <textarea class="form-control bg-dark border-secondary text-white border-opacity-30" id="message" name="message" rows="4" placeholder="Write your message..." required style="border-radius: 8px;"></textarea>
             </div>
 
-            <div class="text-center">
-              <button type="submit" class="btn btn-warning text-white px-5 py-2 fw-semibold">
+            <div class="text-center mt-4">
+              <button type="submit" class="btn btn-orange w-100 py-2 fw-semibold" style="border-radius: 8px;">
                 Send Message
               </button>
             </div>
@@ -99,26 +125,44 @@
   </div>
 </div>
 
-<!-- ✅ Google Map Section -->
-<div class="container-fluid px-0 mt-5 mb-5">
-  <h2 class="text-center mb-4 fw-bold text-warning">Find Us on Map</h2>
-  <div class="ratio ratio-16x9">
+<!-- Google Map Section -->
+<div class="container-fluid px-0 mt-5 border-top border-secondary border-opacity-10">
+  <div class="ratio ratio-21x9" style="max-height: 400px; overflow: hidden;">
     <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11610016257!2d72.74109949348169!3d19.08219783993083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63a7a8b8f1f%3A0x91f8fefc3d4e65f2!2sMumbai!5e0!3m2!1sen!2sin!4v1698085480196!5m2!1sen!2sin" 
-      width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3563.8569830582297!2d83.38240431504073!3d26.717013983210403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39915cab7cdb5e59%3A0xe543e498c8c67c5e!2sTaramandal%20Rd%2C%20Gorakhpur%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1698085480196!5m2!1sen!2sin" 
+      width="100%" height="400" style="border:0; filter: grayscale(1) invert(0.9) contrast(1.2);" allowfullscreen="" loading="lazy">
     </iframe>
   </div>
 </div>
 
-<!-- ✅ Auto-hide alert after 4 seconds -->
+<!-- Auto-populate inquiry message & Auto-hide alert script -->
 <script>
-  setTimeout(() => {
-    const alert = document.querySelector('.alert');
-    if (alert) {
-      alert.classList.remove('show');
-      alert.classList.add('fade');
+  document.addEventListener('DOMContentLoaded', function() {
+    // 1. Get query parameter for car inquiries
+    const urlParams = new URLSearchParams(window.location.search);
+    const carInquiry = urlParams.get('inquire');
+    if (carInquiry) {
+      const messageTextarea = document.getElementById('message');
+      if (messageTextarea) {
+        messageTextarea.value = "Hello Rishi Garage, I am interested in inquiring about the certified pre-owned: " + decodeURIComponent(carInquiry) + ". Please provide me with details on vehicle condition, price options, and test drive slots.";
+      }
     }
-  }, 4000);
+
+    // 2. Auto-hide alert after 4 seconds
+    setTimeout(() => {
+      const alert = document.querySelector('.alert');
+      if (alert) {
+        if (typeof bootstrap !== 'undefined') {
+          const bsAlert = new bootstrap.Alert(alert);
+          bsAlert.close();
+        } else {
+          alert.style.transition = 'opacity 0.5s ease';
+          alert.style.opacity = '0';
+          setTimeout(() => alert.remove(), 500);
+        }
+      }
+    }, 4000);
+  });
 </script>
 
 {% endblock body %}
