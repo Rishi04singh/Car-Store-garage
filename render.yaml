@@ -4,7 +4,7 @@ services:
     name: car-store-garage
     runtime: python
     plan: free
-    buildCommand: ./build.sh
+    buildCommand: bash build.sh
     startCommand: gunicorn hello.wsgi:application
     envVars:
       - key: PYTHON_VERSION
